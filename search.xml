@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>1.4 Helloworld</title>
+      <link href="/2023/03/11/world/"/>
+      <url>/2023/03/11/world/</url>
+      
+        <content type="html"><![CDATA[<h2 id="hello-world的代码及注释"><a href="#hello-world的代码及注释" class="headerlink" title="hello world的代码及注释"></a>hello world的代码及注释</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/* this is the first c program */ #注释</span><br><span class="line">include &lt;stdio.h&gt; #头文件</span><br><span class="line">int main(void) #main函数(返回值,函数名,参数)</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;hello world&quot;); #打印</span><br><span class="line">    return 0; #返回语句</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="编写-编译-运行-调试"><a href="#编写-编译-运行-调试" class="headerlink" title="编写,编译,运行,调试"></a>编写,编译,运行,调试</h2><ul><li>debug <ul><li>便于一步步调试</li></ul></li><li>release<ul><li>更精简</li></ul></li><li>x86<ul><li>32位</li><li>处理器,寄存器处理4个字节</li><li>内存寻址32位</li></ul></li><li>x64<ul><li>64位</li><li>处理器，寄存器处理8个字节</li><li>内存寻址64位</li></ul></li><li>.cpp与.c的区别<ul><li>cpp语法更为严格</li><li>cpp可以在后定义变量</li></ul></li></ul><h2 id="Linux编写-编译-运行-调试"><a href="#Linux编写-编译-运行-调试" class="headerlink" title="Linux编写,编译,运行,调试"></a>Linux编写,编译,运行,调试</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim hello.c</span><br><span class="line">gcc hello.c -o hello #编译</span><br><span class="line">gdb hello.c -o hello_g -g  #编译为debug版本</span><br><span class="line">gdb hello_g #打开</span><br></pre></td></tr></table></figure><h3 id="一些常用gdb命令"><a href="#一些常用gdb命令" class="headerlink" title="一些常用gdb命令"></a>一些常用gdb命令</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">b 行号：打断点</span><br><span class="line">info b：查看断点</span><br><span class="line">d 断点编号： 取消断点</span><br><span class="line">l 行号：显示代码</span><br><span class="line">l main：显示包含main的那一行</span><br><span class="line">r：run，开始运行程序,跳到第一个断点</span><br><span class="line">s：step，逐语句，对应vs的F11（进入函数）</span><br><span class="line">n：next，逐过程，对应vs的F10</span><br><span class="line">c：continue，跳转道下一个断点</span><br><span class="line">p：查看变量</span><br><span class="line">display / undisplay：常显示 或 取消常显示</span><br><span class="line">until 行号：跳转到指定行</span><br><span class="line">finish：执行完一个函数后停下</span><br><span class="line">bt：查看函数调用堆栈</span><br></pre></td></tr></table></figure><h2 id="在main之前执行函数"><a href="#在main之前执行函数" class="headerlink" title="在main之前执行函数"></a>在main之前执行函数</h2><h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"> __attribute((constructor)) void before_main()</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;before main!\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">__attribute((destructor)) void after_main()</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;after main!\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">   printf(&quot;This is main function.\n&quot;);</span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="win"><a href="#win" class="headerlink" title="win"></a>win</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int before_main(void)</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;before main!\n&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int after_main(void)</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;after main!\n&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">typedef int func();</span><br><span class="line"></span><br><span class="line">#pragma data_seg(&quot;.CRT$XIU&quot;)</span><br><span class="line">static func* before[] = &#123; before_main &#125;;</span><br><span class="line">#pragma data_seg(&quot;.CRT$XPU&quot;)</span><br><span class="line">static func* after[] = &#123; after_main &#125;;</span><br><span class="line">#pragma data_seg()</span><br><span class="line"></span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;This is main function.&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux常用指令</title>
+      <link href="/2023/03/11/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+      <url>/2023/03/11/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Linux常用指令"><a href="#Linux常用指令" class="headerlink" title="Linux常用指令"></a>Linux常用指令</h1><h2 id="cd-目录切换"><a href="#cd-目录切换" class="headerlink" title="cd 目录切换"></a>cd 目录切换</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd / #根目录</span><br><span class="line">cd /home #home目录</span><br></pre></td></tr></table></figure><h2 id="mkdir-创建空目录"><a href="#mkdir-创建空目录" class="headerlink" title="mkdir 创建空目录"></a>mkdir 创建空目录</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir test1 #创建test1目录</span><br></pre></td></tr></table></figure><h2 id="rmdir-删除空目录"><a href="#rmdir-删除空目录" class="headerlink" title="rmdir 删除空目录"></a>rmdir 删除空目录</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir test1 #删除test1目录</span><br></pre></td></tr></table></figure><h2 id="cp-复制"><a href="#cp-复制" class="headerlink" title="cp 复制"></a>cp 复制</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp 1.txt /test1 #将1.txt复制到test1目录</span><br></pre></td></tr></table></figure><h2 id="mv-移动-amp-重命名"><a href="#mv-移动-amp-重命名" class="headerlink" title="mv 移动&amp;重命名"></a>mv 移动&amp;重命名</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv 1.txt /test1 #将1.txt移动到test1目录</span><br><span class="line">mv test1 test2 #将test1重命名test2</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第一篇文章</title>
+      <link href="/2023/03/08/2023-3-8%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+      <url>/2023/03/08/2023-3-8%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="这是我的第一篇文章"><a href="#这是我的第一篇文章" class="headerlink" title="这是我的第一篇文章"></a>这是我的第一篇文章</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>动画</title>
+      <link href="/animation/index.html"/>
+      <url>/animation/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+  
+</search>
