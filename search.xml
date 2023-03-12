@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>1.5程序基础概念</title>
+      <link href="/2023/03/11/%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
+      <url>/2023/03/11/%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/</url>
+      
+        <content type="html"><![CDATA[<p>1.a.c预处理为a.i编译为a.s汇编为a.o链接为a.exe。</p><p>2.进程是动态的，有生命周期，动态生成，动态消亡。程序是静态的，是指令与代码的集合。一个程序至少有一个进程，一个进程至少有一个线程，进程是资源分配的基本单位，线程是调度的基本单位。</p><p>3.windows中.exe .dll .sys均为pe格式，Linux中.elf为pe格式.</p><p>4.eop为程序的入口点，oep为原入口点。程序可能套壳，壳的入口点为eop。壳运行时还会到原入口点执行，称原入口点为oep。imagebase为内存基地址，默认为0x000000。VA为pe文件在内存的虚拟地址。RVA是相对于imagebase的虚拟地址。RVA&#x3D;VA-imagebase。VOFFSET是pe文件节的起始地址相对于imagebase的偏移(内存中相对于imagebase的偏移)。Roffset相对于文件在磁盘首地址的偏移。Voffset(内存)&#x3D;节的起始地址(虚拟地址)-imagebase地址。Roffset(磁盘)&#x3D;节的起始地址-文件的首地址(磁盘)</p><p>PE文件是一种Windows可执行文件格式，包含了程序代码、数据和资源等信息。在PE文件中，以下是一些相关概念：</p><ul><li>VA（Virtual Address）：虚拟地址，是程序在内存中的地址。VA是相对于进程的基地址（Image Base）的偏移量，进程的基地址由操作系统决定。在内存中，程序的代码和数据被映射到VA指向的地址空间中。</li><li>RVA（Relative Virtual Address）：相对虚拟地址，是相对于模块基地址（Module Base）的偏移量，模块基地址是PE文件在内存中的起始地址。RVA通常用于描述PE文件中各种数据结构的地址，如PE头、节表、导入表、导出表等。</li><li>Voffset：虚拟偏移量，是一个虚拟地址相对于文件头的偏移量。例如，一个VA为0x4000的代码段在PE文件中的偏移量为Voffset &#x3D; 0x4000 - Image Base。</li><li>Roffset：相对偏移量，是一个RVA相对于文件头的偏移量。例如，一个RVA为0x1000的代码段在PE文件中的偏移量为Roffset &#x3D; 0x1000。</li></ul><p>总的来说，VA和RVA是描述程序在内存中的位置，而Voffset和Roffset是描述程序在PE文件中的位置。需要注意的是，对于不同的PE文件，Image Base和模块基地址可能不同，因此VA和RVA也会不同。</p><p>5.VA对应的文件偏移量（Offset）</p><p>Offset &#x3D; VA - ImageBase + ROffset </p><p>Offset &#x3D; 0x00049586 - 0x00040000 + 0x00000540 </p><p>Offset &#x3D; 0x00009526</p><p>.text段的起始地址 &#x3D; ImageBase + ROffset - VOffset</p><p>.text段的起始地址 &#x3D; 0x00040000 + 0x00000540 - 0x0000540 </p><p>.text段的起始地址 &#x3D; 0x00040000</p><p>因此，该VA对应的文件地址为：.text段的起始地址 + Offset，即：</p><p>FileAddress &#x3D; .text段的起始地址 + Offset </p><p>FileAddress &#x3D; 0x0000540 + 0x00009526 </p><p>FileAddress &#x3D; 0x0000E066</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>1.4 Helloworld</title>
       <link href="/2023/03/11/world/"/>
       <url>/2023/03/11/world/</url>
@@ -46,17 +59,6 @@
     
     
     <entry>
-      <title>动画</title>
-      <link href="/animation/index.html"/>
-      <url>/animation/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -68,9 +70,9 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>动画</title>
+      <link href="/animation/index.html"/>
+      <url>/animation/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -104,6 +106,17 @@
       <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
