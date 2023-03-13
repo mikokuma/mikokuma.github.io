@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>5.2变量作用域，储存空间，生命周期</title>
+      <link href="/2023/03/13/5-2%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%8C%E5%82%A8%E5%AD%98%E7%A9%BA%E9%97%B4%EF%BC%8C%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+      <url>/2023/03/13/5-2%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%8C%E5%82%A8%E5%AD%98%E7%A9%BA%E9%97%B4%EF%BC%8C%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</url>
+      
+        <content type="html"><![CDATA[<table><thead><tr><th>变量类型</th><th>作用域</th><th>储存空间</th><th>生命周期</th></tr></thead><tbody><tr><td>全局变量</td><td>整个程序可见</td><td>静态区(.data&#x2F;.bss)</td><td>整个程序运行期间</td></tr><tr><td>全局静态变量</td><td>当前源文件</td><td>静态区(.data&#x2F;.bss)</td><td>整个程序运行期间</td></tr><tr><td>局部变量</td><td>函数内部</td><td>栈</td><td>函数运行期间</td></tr><tr><td>静态局部变量</td><td>函数内部</td><td>静态区</td><td>整个程序运行期间</td></tr><tr><td>寄存器变量</td><td>函数内部</td><td>寄存器</td><td>函数运行期间</td></tr></tbody></table>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>4.1内建型别</title>
       <link href="/2023/03/12/4-1%E5%86%85%E5%BB%BA%E5%9E%8B%E5%88%AB/"/>
       <url>/2023/03/12/4-1%E5%86%85%E5%BB%BA%E5%9E%8B%E5%88%AB/</url>
@@ -21,7 +34,7 @@
       <link href="/2023/03/12/2-1%E6%95%B4%E6%95%B0%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/"/>
       <url>/2023/03/12/2-1%E6%95%B4%E6%95%B0%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/</url>
       
-        <content type="html"><![CDATA[<p>![螢幕擷取畫面 2023-03-12 104939](C:\Users\Lenovo\Desktop\c\螢幕擷取畫面 2023-03-12 104939.png)</p><p>![螢幕擷取畫面 2023-03-12 105618](C:\Users\Lenovo\Desktop\c\螢幕擷取畫面 2023-03-12 105618.png)</p><p>![螢幕擷取畫面 2023-03-12 110856](C:\Users\Lenovo\Desktop\c\螢幕擷取畫面 2023-03-12 110856.png)</p><p>![螢幕擷取畫面 2023-03-12 112403](C:\Users\Lenovo\Desktop\c\螢幕擷取畫面 2023-03-12 112403.png)</p>]]></content>
+        <content type="html"><![CDATA[<p>![](C:\Users\Lenovo\Desktop\c\2.1\螢幕擷取畫面 2023-03-12 105618.png)</p>]]></content>
       
       
       
@@ -85,9 +98,9 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -96,9 +109,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -129,9 +142,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -140,9 +153,9 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
