@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>7.1运算符</title>
+      <link href="/2023/03/14/7-1%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+      <url>/2023/03/14/7-1%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+      
+        <content type="html"><![CDATA[<p>i++与++i的区别</p><p>一，在c语言的内建型别：</p><p>i++；</p><p>++i；</p><p>在c++里，i是一个对象，++i的效率比i++的效率高</p><p>二、在复合表达式或赋值语句里：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int i=0；</span><br><span class="line"></span><br><span class="line">int a=i++；// a=i；i=i+1；--&gt;a==0,i==1</span><br><span class="line"></span><br><span class="line">int i=0;</span><br><span class="line"></span><br><span class="line">int b=++i; // i=i+1;b=i; --&gt;b==1,i==1</span><br></pre></td></tr></table></figure><p>三，在函数中：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int i =0;</span><br><span class="line">printf(&quot;i:%d\n&quot;,i++); //输出0</span><br><span class="line">i=0;</span><br><span class="line">printf(&quot;i:%d\n&quot;,++i); //输出1</span><br><span class="line">i=0;</span><br><span class="line">printf(&quot;%d %d\n&quot;,i++,++i); //输出取决于编译器</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>6.1输入输出</title>
       <link href="/2023/03/13/6-1%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"/>
       <url>/2023/03/13/6-1%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
@@ -111,9 +124,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -122,9 +135,9 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -144,9 +157,9 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -166,9 +179,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
