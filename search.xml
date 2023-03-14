@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>8.1程序语句</title>
+      <link href="/2023/03/14/8-1%E7%A8%8B%E5%BA%8F%E8%AF%AD%E5%8F%A5/"/>
+      <url>/2023/03/14/8-1%E7%A8%8B%E5%BA%8F%E8%AF%AD%E5%8F%A5/</url>
+      
+        <content type="html"><![CDATA[<h1 id="函数调用语句"><a href="#函数调用语句" class="headerlink" title="函数调用语句"></a>函数调用语句</h1><p>产生随机数</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;time.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">srand((unsigned int)time(0));</span><br><span class="line">for(int i=0;i&lt;10;i++)</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;%d&quot;,rand()%100);</span><br><span class="line">&#125;</span><br><span class="line">printf(&quot;\n&quot;);</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h1><p>大写字母转为小写字母</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">char ch;</span><br><span class="line">printf(&quot;Please input a character:\n&quot;);</span><br><span class="line">scanf_s(&quot;%c&quot;,&amp;ch,1);</span><br><span class="line">if(ch&gt;=&#x27;A&#x27;&amp;&amp;ch&lt;=&#x27;z&#x27;)</span><br><span class="line">&#123;</span><br><span class="line">ch+=&#x27;a&#x27;-&#x27;A&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">printf(&quot;%c&quot;,ch);</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>else if打印成绩</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">int score;</span><br><span class="line">printf(&quot;Please input the score\n&quot;);</span><br><span class="line">scanf_s(&quot;%d&quot;,&amp;score);</span><br><span class="line">if(score&gt;=90)</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;A\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else if(score&gt;=80)</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;B\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else if(score&gt;=70)</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;C\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else if(score&gt;=60)</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;D\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;E\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h1><p>判断成绩</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">char ch;</span><br><span class="line">printf(&quot;Please input the score:\n&quot;);</span><br><span class="line">scanf_s(&quot;%c&quot;,&amp;ch);</span><br><span class="line">switch(ch)</span><br><span class="line">&#123;</span><br><span class="line">case &#x27;A&#x27;:</span><br><span class="line">printf(&quot;score&gt;=90\n&quot;);</span><br><span class="line">break;</span><br><span class="line">case &#x27;B&#x27;:</span><br><span class="line">printf(&quot;score&gt;=80\n&quot;);</span><br><span class="line">break;</span><br><span class="line">case &#x27;C&#x27;:</span><br><span class="line">printf(&quot;score&gt;=70\n&quot;);</span><br><span class="line">break;</span><br><span class="line">case &#x27;D&#x27;:</span><br><span class="line">printf(&quot;score&gt;=60\n&quot;);</span><br><span class="line">break;</span><br><span class="line">default:</span><br><span class="line">printf(&quot;score&lt;60\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h1><h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>7.1运算符</title>
       <link href="/2023/03/14/7-1%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
       <url>/2023/03/14/7-1%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
@@ -135,9 +148,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -146,9 +159,9 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
