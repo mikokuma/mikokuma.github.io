@@ -1,3 +1,4 @@
+https://mikokuma.github.io/posts/159ace20/
 https://mikokuma.github.io/posts/93aed580/
 https://mikokuma.github.io/tags/index.html
 https://mikokuma.github.io/posts/14994/
@@ -27,6 +28,7 @@ https://mikokuma.github.io/
 https://mikokuma.github.io/tags/ctf/
 https://mikokuma.github.io/tags/stack/
 https://mikokuma.github.io/tags/linux/
+https://mikokuma.github.io/tags/hexo/
 https://mikokuma.github.io/tags/heap/
 https://mikokuma.github.io/tags/c/
 https://mikokuma.github.io/tags/assembly/

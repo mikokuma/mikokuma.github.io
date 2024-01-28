@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>error spawn failed报错</title>
+      <link href="/posts/159ace20/"/>
+      <url>/posts/159ace20/</url>
+      
+        <content type="html"><![CDATA[<p>整理了一下博客,发现<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d </code>报错<code>error spawn failed...</code>,记录下解决方法</p><h2 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h2><ol><li>如果<code>.deploy_git</code>里的文件被修改可能出现此问题,参考方法一</li><li><code>ssh -vT git@github.com</code>测试是否能连通,若出现<code>ssh: connect to host xx.xx.xx.xx port 22: Connection timed out</code>,22端口可能被防火墙或运营商屏蔽,参考方法二</li></ol><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><ol><li>删除<code>.deploy_git</code></li><li><code>git config --global core.autocrlf false</code></li><li><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></li></ol><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在<code>C:\Users\USERNAME\.ssh</code>中找到config文件,没有的话新建一个,<code>USERNAME</code>为电脑用户名,在config文件写入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  Hostname ssh.github.com</span><br><span class="line">  Port 443</span><br></pre></td></tr></table></figure><p>执行<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>即可</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>写在2023结束</title>
       <link href="/posts/93aed580/"/>
       <url>/posts/93aed580/</url>
