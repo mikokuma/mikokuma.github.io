@@ -1,3 +1,4 @@
+https://mikokuma.github.io/posts/594d9f6c/
 https://mikokuma.github.io/posts/7b49d65d/
 https://mikokuma.github.io/posts/520eb600/
 https://mikokuma.github.io/posts/1ca7db7c/
@@ -36,6 +37,7 @@ https://mikokuma.github.io/tags/heap/
 https://mikokuma.github.io/tags/suid/
 https://mikokuma.github.io/tags/uaf/
 https://mikokuma.github.io/tags/c/
+https://mikokuma.github.io/tags/record/
 https://mikokuma.github.io/tags/assembly/
 https://mikokuma.github.io/categories/pwn-college/
 https://mikokuma.github.io/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/
