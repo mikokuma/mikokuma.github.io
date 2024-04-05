@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Tr0upe's blog - Try harder</title><meta name="author" content="Tr0upe"><meta name="copyright" content="Tr0upe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="个人blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tr0upe&#39;s blog">
+<meta property="og:url" content="https://mikokuma.github.io/page/2/index.html">
+<meta property="og:site_name" content="Tr0upe&#39;s blog">
+<meta property="og:description" content="个人blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/avatar1.png">
+<meta property="article:author" content="Tr0upe">
+<meta property="article:tag" content="blog,pwn,ctf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/avatar1.png"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://mikokuma.github.io/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Tr0upe","link":"链接: ","source":"来源: Tr0upe's blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Tr0upe\'s blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-04-05 20:47:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/avatar1.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/%E5%9D%82%E4%BA%95%E6%B3%89%E6%B0%B4.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Tr0upe's blog"><span class="site-name">Tr0upe's blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Tr0upe's blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/mikokuma" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:fubao8735@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/10973/" title="justcode"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/p2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="justcode"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/10973/" title="justcode">justcode</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-28T16:39:47.000Z" title="发表于 2023-07-29 00:39:47">2023-07-29</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/stack/">stack</a></span></div><div class="content">利用方式：一个未初始化的变量和scanf缺少取地址符号导致的任意地址写
+注意：循环中栈的地址是复用的
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859from pwn import *context(log_level=&#x27;debug&#x27;,arch=&#x27;amd64&#x27;)p=process(&#x27;./pwn&#x27;)libc=ELF(&#x27;/home/miko/Desktop/glibc-all-in-one/libs/2.23-0ubuntu11.3_amd64/libc.so.6&#x27;)stack_chk_fail=0x602038pop_rdi_ret=0x400ea3put_plt=0x400940libc_start_main_got=0x602050main=0x400D4Boffset=libc.symbols[&#x27;__libc_start_ma ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/33489/" title="修改tls"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202307242234923.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="修改tls"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/33489/" title="修改tls">修改tls</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-24T10:15:19.000Z" title="发表于 2023-07-24 18:15:19">2023-07-24</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/stack/">stack</a></span></div><div class="content">知识点：(1)gdb中使用fsbase指令可获得fs寄存器的值
+(2)TLS（线程局部储存）：防止当一个线程卡死后对其它线程对全局变量或该函数内的static变量的使用产生影响，会在该线程开始时，拷贝一份全局变量和static变量到TLS段。线程的TLS段一般和栈段挨得很近
+(3)线程题的canary比较：线程题的canary是把栈段的canary和TLS段的副本进行比较，所以要绕过canary的话，可以将栈段和TLS段的canary均覆盖成相同的值
+(4)在 glibc 实现中，TLS 由段寄存器fs（x86-64 架构）指向。TLS在 glibc中的实现为 tcbhead_t(TCB)结构体，其定义如下：
+12345678910111213typedef struct  &#123;    void *tcb;        /* Pointer to the TCB.  Not necessarily the                 thread descriptor used by libpthread.  */    dtv_t *dtv;    void *self ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/4673/" title="warm_up-seccomp沙箱(orw)"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/109219943_p0_master1200.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="warm_up-seccomp沙箱(orw)"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/4673/" title="warm_up-seccomp沙箱(orw)">warm_up-seccomp沙箱(orw)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-24T02:02:33.000Z" title="发表于 2023-06-24 10:02:33">2023-06-24</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/stack/">stack</a></span></div><div class="content">检查下保护
+
+使用了seccomp系统调用，也就是说开了沙箱，seccomp-tools看看禁用了什么
+
+禁用了execve系统调用,system系统调用实际上会调用execve,所以通过system(‘&#x2F;bin&#x2F;sh’)来getshell是不可能的，所以我们换个思路，通过orw，即open一个文件(实际上打开的是一个文件描述符)，将文件的内容read到内存中，再将文件内容write到标准输出(stdout)
+看看溢出函数
+
+gdb调试偏移，填充24个字节后就是canary，canary最低位为\x00,所以用任意字符将\x00覆盖掉，通过printf即可泄露出canary
+1234payload1=b&#x27;a&#x27;*24p.sendline(payload1)p.recvuntil(b&#x27;a&#x27;*24)canary=u64(p.recv(8))-0xa
+
+ 继续调试，canary之后填充8个字节就是返回地址。但是我们要想orw得到flag，必须先写入orw的机器码，aslr会随机化栈的地址。所以我们选择存放在bss段或got表
+
+
+
+
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/17975/" title="not_the_same_3dsctf_2016-mprotect提升权限"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/HALUCHILU%20KYOTO_Citrus%20Love_108750673_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="not_the_same_3dsctf_2016-mprotect提升权限"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/17975/" title="not_the_same_3dsctf_2016-mprotect提升权限">not_the_same_3dsctf_2016-mprotect提升权限</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-11T02:04:18.000Z" title="发表于 2023-06-11 10:04:18">2023-06-11</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/stack/">stack</a></span></div><div class="content">
+这道题有两种解法，一种是fgets读取flag，另一种是mprotect提升权限，这里我们只介绍第二种解法
+
+checksec，题目只开了栈不可执行，其他保护没有开启
+
+int mprotect(void *addr, size_t len, int prot);
+addr：修改保护属性区域的起始地址，addr必须是一个内存页的起始地址，简而言之为页大小（一般是 4KB &#x3D;&#x3D; 4096字节）整数倍。len：被修改保护属性区域的长度,最好为页大小整数倍。
+prot:  内存的权限  # 0x7 &#x3D;&#x3D; 可读可写可执行
+PROT_READ：可写，值为 1
+PROT_WRITE：可读， 值为 2
+PROT_EXEC：可执行，值为 4
+PROT_NONE：不允许访问，值为 0
+
+程序有mprotect函数，所以我们可以用mprotect函数修改got表或bss段内存区域的权限为0x7
+
+ctrl+s打开程序的段表，观察到bss段的起始地址不是4kb(0x1000)的整数倍，所以选择修改got表
+值得注意的是，这个程序没有关闭输入输出缓冲区，所以我们rec ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/25731/" title="2023ssctf-初赛"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/Sa-fu_%E3%82%AA%E3%82%A2%E3%82%B7%E3%82%B9%E3%81%A8%E3%83%A6%E3%83%BC%E3%83%88%E3%83%94%E3%82%A2%20%20%E3%81%AA%E3%81%AE%E3%81%AF%20feat.%E9%8F%A1%E9%9F%B3%E3%83%AA%E3%83%B3_108694131_p0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2023ssctf-初赛"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/25731/" title="2023ssctf-初赛">2023ssctf-初赛</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-06T02:25:49.000Z" title="发表于 2023-06-06 10:25:49">2023-06-06</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ctf/">ctf</a></span></div><div class="content">shanxi溢出的字节数不够，利用栈迁移获得足够空间构造rop链
+exp如下:
+1234567891011121314151617181920212223242526272829303132333435363738from pwn import *context(log_level=&#x27;debug&#x27;)elf=ELF(&#x27;./pwn&#x27;)libc=ELF(&#x27;/lib/x86_64-linux-gnu/libc.so.6&#x27;)#p=process(&#x27;./pwn&#x27;)p=remote(&quot;60.204.130.55&quot;,10001)p.recvuntil(b&#x27;choice :\n&#x27;)payload=str(2).encode(&#x27;utf-8&#x27;)p.sendline(payload)p.recv()p.sendline(b&#x27;%37$p%10$p%19$p&#x27;)p.recvuntil(b&#x27;0x&#x27;)libc_start_main=int( ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/35316/" title="32format-bss"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/%E7%89%9B%E5%9C%9F_%E9%87%9D%E5%A6%99%E4%B8%B8_108602112_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="32format-bss"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/35316/" title="32format-bss">32format-bss</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-02T09:12:04.000Z" title="发表于 2023-06-02 17:12:04">2023-06-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/stack/">stack</a></span></div><div class="content">
+checksec下,看下保护
+
+如图，该函数存在漏洞，分析下函数逻辑，read函数将读取的0x32个字节放入s1中，strncmp函数将s1的前8个字节与“wllmmllw“比较，不同返回非0，执行printf函数，相同返回0，跳出循环。
+
+
+gdb调试，发现printf的参数并不是储存在栈上，而是储存在bss段，所以我们不能直接在栈上写入内容，于是需要借助跳板来在栈上写入相应的值。
+
+这里我们可以借助0xffffd0f8这个跳板，将0xffffd108指向的地址修改为0xffffd0fc，这样我们可以将0xffffd0fc指向的地址修改为我们想要的地址。为什么要修改0xffffd108指向的地址？是因为0xffffd0fc指向的地址高两个字节的地址为0x804，与system高两个字节的地址一致，便于修改，而且这个程序会一直处于while循环，没有leave，ret指令，所以也不用担心修改会破坏程序执行流。于是我们可以将printf函数的got表项的地址写到0xffffd0fc中。同理，我们可以将0xffffd108指向的地址修改为0xffffd10c，并将printf函数的got ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/10017/" title="2023ciscn-funcanary"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/Uomi_haze_107599099_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2023ciscn-funcanary"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/10017/" title="2023ciscn-funcanary">2023ciscn-funcanary</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-30T02:34:12.000Z" title="发表于 2023-05-30 10:34:12">2023-05-30</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ctf/">ctf</a></span></div><div class="content">
+checksec下,保护全开
+主函数逻辑如下
+
+存在fork函数创建子进程
+
+v3 &#x3D; fork(); 是 C 编程语言中的一行代码，它调用 fork() 函数并将其返回值分配给名为 v3 的变量。 fork() 函数通过复制调用进程来创建一个新进程。 fork() 函数被调用后，新进程（称为子进程）将与原进程（称为父进程）相同，但它们将独立执行。
+fork()函数的返回值用于判断这段代码是在父进程中执行还是在子进程中执行。 如果 fork() 返回 0，则代码正在子进程中执行。 如果 fork() 返回正值，则代码正在父进程中执行，返回值是子进程的进程 ID。 如果 fork() 返回 -1，则发生错误并且没有创建子进程。
+
+进入sub_128A()函数
+
+存在栈溢出漏洞且有canary，考虑到有fork函数，可以使用canary爆破
+
+对于 Canary，虽然每次进程重启后的 Canary 不同 (相比 GS，GS 重启后是相同的)，但是同一个进程中的不同线程的 Canary 是相同的， 并且 通过 fork 函数创建的子进程的 Canary 也是相同的，因为 fork ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/59067/" title="2023ciscn-shaokao"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/%E6%9D%BE(A%E3%83%BBTYPEcorp.)_%E3%83%9C%E3%82%AB%E3%83%AD%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB7_108386230_p0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2023ciscn-shaokao"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/59067/" title="2023ciscn-shaokao">2023ciscn-shaokao</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-28T09:27:21.000Z" title="发表于 2023-05-28 17:27:21">2023-05-28</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ctf/">ctf</a></span></div><div class="content">
+拿到程序，checksec下，pie没开，nx和canary开着
+
+运行程序，分别试试1，2，3，4，发现一开始余额为233，啤酒烤串会花钱，承包摊位钱不够
+
+把程序放进ida分析，发现承包摊位需要100000，但是钱不够，继续观察
+
+
+看见啤酒，串的钱的计算方式有缺陷，输入负数，余额会增加，倒贴是吧😊
+
+成百万富翁啦:P
+
+买下摊位后，出现了改名这一新选项，进ida看看
+
+看见了strcpy函数，将v5复制到name，没有对复制的字符进行限制，scanf也没有对输入的字符进行限制，同时v5只能容纳32个字节，存在栈溢出漏洞
+
+
+
+计算出偏移为40
+
+因为程序函数很多，我们可以通过ROPgadget查找执行execve(“&#x2F;bin&#x2F;sh”,NULL,NULL)的片段
+
+
+
+在程序里找不到&#x2F;bin&#x2F;sh字符串,但是我们看到烧烤摊能改名，想到将&#x2F;bin&#x2F;sh字符串写进name空间。
+完成前置工作，依据rop的基本思想，构造payload：
+
+from pwn import *context(log_level&#x3D;’de ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/14994/" title="格式化字符串:修改返回地址"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/81438953_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="格式化字符串:修改返回地址"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/14994/" title="格式化字符串:修改返回地址">格式化字符串:修改返回地址</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-25T13:39:24.000Z" title="发表于 2023-05-25 21:39:24">2023-05-25</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/stack/">stack</a></span></div><div class="content">
+
+IDA进程序看下，发现printf(s)存在格式化字符串漏洞，且第一次fgets输入字符1会执行close_borders，其实执行no_panic也同理，方便起见只演示下close_borders
+
+checksec下,relro保护全开，got表地址改不了，pie也打开了，地址是随机的。
+
+
+在ida里仔细找找，发现题目给了win()函数，但pie是打开的，ida里显示的是偏移地址
+
+gdb调试下，输入的值是格式化字符串的第6个参数
+
+rbp是第14个参数，返回地址是第15个参数，rbp的值与栈上储存返回地址的地址偏移为0x8
+
+得到基址0x555555554000
+
+基址+偏移，得到win函数的真实地址，计算其与返回地址的偏移（偏移是固定的），即0x55555555484-0x555555555165&#x3D;0x31f
+确定下思路，先用第1个printf泄露出rbp,返回地址的值，rbp的值-0x8得到储存返回地址的真实地址，返回地址的值-0x31f得到win函数的真实地址。再通过第2个printf将储存返回地址的真实地址写入，修改为win函数的地址即可。注意，第二次写入 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/58637/" title="格式化字符串:更改got表"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/108339996_p0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="格式化字符串:更改got表"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/58637/" title="格式化字符串:更改got表">格式化字符串:更改got表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-20T10:00:33.000Z" title="发表于 2023-05-20 18:00:33">2023-05-20</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/stack/">stack</a></span></div><div class="content">
+前两行memset将s,format中的值全部置为0,sprintf函数将s中的值与Repeater:拼接为一个字符串后存放在format中。printf(format)存在格式化字符串漏洞。
+
+checksec下,relro保护半开,可以更改got表。
+
+当RELRO保护为NO RELRO的时候，init.array、fini.array、got.plt均可读可写；为PARTIAL RELRO的时候，ini.array、fini.array可读不可写，got.plt可读可写；为FULL RELRO时，init.array、fini.array、got.plt均可读不可写。
+
+gdb下，确定格式化字符串的位置
+
+发现有两个地方存放着aaaaaaaa，这是为什么呢？看一眼ida，输入的字符串先存放在s中，然后与Repeater:拼接存入format。为了方便起见，我们选用上面的作为参数。计算下偏移
+
+确定下思路，更改strlen的got表地址为system的地址，下一次循环再发送&#x2F;bin&#x2F;sh完成调用。
+
+首先需要泄露出system的真实地址,我们在栈上找出了（__ ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/avatar1.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Tr0upe</div><div class="author-info__description">个人blog</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/mikokuma"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/mikokuma" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:fubao8735@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/594d9f6c/" title="周报"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202403121512101.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="周报"/></a><div class="content"><a class="title" href="/posts/594d9f6c/" title="周报">周报</a><time datetime="2024-03-11T14:20:17.000Z" title="发表于 2024-03-11 22:20:17">2024-03-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/7b49d65d/" title="mips pwn入门指北"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202403112205251.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mips pwn入门指北"/></a><div class="content"><a class="title" href="/posts/7b49d65d/" title="mips pwn入门指北">mips pwn入门指北</a><time datetime="2024-03-10T05:55:02.000Z" title="发表于 2024-03-10 13:55:02">2024-03-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/520eb600/" title="time_formatter题解"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202403072142937.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="time_formatter题解"/></a><div class="content"><a class="title" href="/posts/520eb600/" title="time_formatter题解">time_formatter题解</a><time datetime="2024-03-07T06:11:01.000Z" title="发表于 2024-03-07 14:11:01">2024-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1ca7db7c/" title="ssh-keygen提权"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202402280056184.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ssh-keygen提权"/></a><div class="content"><a class="title" href="/posts/1ca7db7c/" title="ssh-keygen提权">ssh-keygen提权</a><time datetime="2024-02-27T14:50:53.000Z" title="发表于 2024-02-27 22:50:53">2024-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/159ace20/" title="error spawn failed报错"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202401290045539.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="error spawn failed报错"/></a><div class="content"><a class="title" href="/posts/159ace20/" title="error spawn failed报错">error spawn failed报错</a><time datetime="2024-01-28T15:55:28.000Z" title="发表于 2024-01-28 23:55:28">2024-01-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/pwn-college/"><span class="card-category-list-name">pwn.college</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"><span class="card-category-list-name">年终总结</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/"><span class="card-category-list-name">攻防世界</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/ctf/" style="font-size: 1.35em; color: rgb(49, 88, 165)">ctf</a><a href="/tags/stack/" style="font-size: 1.45em; color: rgb(178, 18, 158)">stack</a><a href="/tags/linux/" style="font-size: 1.15em; color: rgb(3, 100, 100)">linux</a><a href="/tags/hexo/" style="font-size: 1.15em; color: rgb(28, 185, 63)">hexo</a><a href="/tags/mips/" style="font-size: 1.15em; color: rgb(150, 188, 193)">mips</a><a href="/tags/heap/" style="font-size: 1.15em; color: rgb(94, 118, 178)">heap</a><a href="/tags/suid/" style="font-size: 1.15em; color: rgb(111, 8, 178)">suid</a><a href="/tags/uaf/" style="font-size: 1.15em; color: rgb(95, 10, 66)">uaf</a><a href="/tags/c/" style="font-size: 1.25em; color: rgb(86, 3, 72)">c</a><a href="/tags/record/" style="font-size: 1.15em; color: rgb(172, 19, 84)">record</a><a href="/tags/assembly/" style="font-size: 1.25em; color: rgb(95, 120, 80)">assembly</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">25</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-03-07T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">15k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/%E5%9D%82%E4%BA%95%E6%B3%89%E6%B0%B4.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Tr0upe</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hey, nice to meet you!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["Try harder"])
+  } else {
+    document.getElementById("subtitle").innerHTML = 'Try harder'
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></body></html>

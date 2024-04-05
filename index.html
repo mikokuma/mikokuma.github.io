@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Tr0upe's blog - Try harder</title><meta name="author" content="Tr0upe"><meta name="copyright" content="Tr0upe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="个人blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tr0upe&#39;s blog">
+<meta property="og:url" content="https://mikokuma.github.io/index.html">
+<meta property="og:site_name" content="Tr0upe&#39;s blog">
+<meta property="og:description" content="个人blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/avatar1.png">
+<meta property="article:author" content="Tr0upe">
+<meta property="article:tag" content="blog,pwn,ctf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/avatar1.png"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://mikokuma.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Tr0upe","link":"链接: ","source":"来源: Tr0upe's blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Tr0upe\'s blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-04-05 20:47:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/avatar1.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/%E5%9D%82%E4%BA%95%E6%B3%89%E6%B0%B4.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Tr0upe's blog"><span class="site-name">Tr0upe's blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Tr0upe's blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/mikokuma" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:fubao8735@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/594d9f6c/" title="周报"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202403121512101.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="周报"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/594d9f6c/" title="周报">周报</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-11T14:20:17.000Z" title="发表于 2024-03-11 22:20:17">2024-03-11</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/record/">record</a></span></div><div class="content">重要的事情说三遍 ：周报！周报！周报！</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/7b49d65d/" title="mips pwn入门指北"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202403112205251.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mips pwn入门指北"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/7b49d65d/" title="mips pwn入门指北">mips pwn入门指北</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-10T05:55:02.000Z" title="发表于 2024-03-10 13:55:02">2024-03-10</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/mips/">mips</a></span></div><div class="content">something about mips</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/520eb600/" title="time_formatter题解"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202403072142937.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="time_formatter题解"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/520eb600/" title="time_formatter题解">time_formatter题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-07T06:11:01.000Z" title="发表于 2024-03-07 14:11:01">2024-03-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/uaf/">uaf</a></span></div><div class="content">uaf和命令注入</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/1ca7db7c/" title="ssh-keygen提权"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202402280056184.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ssh-keygen提权"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/1ca7db7c/" title="ssh-keygen提权">ssh-keygen提权</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-02-27T14:50:53.000Z" title="发表于 2024-02-27 22:50:53">2024-02-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/pwn-college/">pwn.college</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/suid/">suid</a></span></div><div class="content">Some UIDs are better than others...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/159ace20/" title="error spawn failed报错"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202401290045539.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="error spawn failed报错"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/159ace20/" title="error spawn failed报错">error spawn failed报错</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-01-28T15:55:28.000Z" title="发表于 2024-01-28 23:55:28">2024-01-28</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">疑难杂症治疗基地</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/93aed580/" title="写在2023结束"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/20231231220512.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="写在2023结束"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/93aed580/" title="写在2023结束">写在2023结束</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-30T11:37:46.000Z" title="发表于 2023-12-30 19:37:46">2023-12-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结</a></span></div><div class="content">Goodbye 2023,hello 2024</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/11686/" title="2023 强网杯小记"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202312191623863.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2023 强网杯小记"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/11686/" title="2023 强网杯小记">2023 强网杯小记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-18T02:36:20.000Z" title="发表于 2023-12-18 10:36:20">2023-12-18</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ctf/">ctf</a></span></div><div class="content">昨天5点强网杯结束，坐牢两天，折磨的一批
+强网先锋ez_fmt泄露libc基址，修改printf函数返回地址为start重新执行，修改main返回地址为one_gadget
+ps:printf函数内部执行ret指令前，数据已经修改完成，所以修改printf函数返回地址也是ok的
+123456789101112131415161718192021222324252627282930313233343536373839from pwn import *context(log_level=&#x27;debug&#x27;,arch=&#x27;amd64&#x27;)p=process(&#x27;./ez_fmt&#x27;)#p=remote(&#x27;47.104.24.40&#x27;,1337)p.recvuntil(b&#x27;There is a gift for you &#x27;)stack=int(p.recv(14),16)+0x68stack1=stack-0x70log.success(&#x27;stack =&gt; &#x27;+hex(stack)) ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/40587/" title="off-by-one"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202311191727700.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="off-by-one"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/40587/" title="off-by-one">off-by-one</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-16T13:30:12.000Z" title="发表于 2023-11-16 21:30:12">2023-11-16</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/heap/">heap</a></span></div><div class="content">b00ks题目地址:b00ks
+知识点ASLR关闭ASLR保护
+1echo 0 &gt; /proc/sys/kernel/randomize_va_space
+brk与mmap堆有两种拓展方式一种是 brk 会直接拓展原来的堆，另一种是 mmap 会单独映射一块内存。我们申请一个超大的块，来使用 mmap 扩展内存。因为 mmap 分配的内存与 libc 之前存在固定的偏移因此可以推算出 libc 的基地址。
+hook函数在2.34及以上的版本中删除了malloc_hook、freehook等钩子函数，虽然在libc中我们仍然能够查询到标签，但是实际上已经不参与调用了，这就导致之前的对于堆的许多攻击手法都基本失效了。
+分析逆向逆向出关键结构体
+12345v2[6] = 0;                        // size*(description + v1) = v2;         // struct pointer*(v2 + 2) = v4;                   // description pointer*(v2 + 1) = ptr;     ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/1887/" title="劫持fini_array"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202309101651108.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="劫持fini_array"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/1887/" title="劫持fini_array">劫持fini_array</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-10T09:35:19.000Z" title="发表于 2023-09-10 17:35:19">2023-09-10</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/stack/">stack</a></span></div><div class="content">知识点程序的入口并不是main,而是libc_start_main,程序运行流程图如下：
+
+__libc_csu_init
+main
+__libc_csu_fini
+fini_array[1]
+fini_array[0]
+
+libc_start_main函数原型
+1__libc_start_main(main,argc,argv&amp;env,_libc_csu_init,_libc_csu_fini,rtld_fini)
+
+_libc_csu_init,_libc_csu_fini在代码段,可见是函数
+下面是_libc_csu_fini函数的汇编实现,我们来分析一下
+123456789101112131415161718192021222324252627push    rbp #将rbp的值压入栈lea     rax, unk_4B80C0 #将unk_4B80C0的地址(0x4B80C0)放入rax寄存器lea     rbp, off_4B80B0 #将off_4B80B0的地址(0x4B80B0)放入rbp寄存器push    rbxsub     rax, rbp #r ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/35734/" title="srop"><img class="post-bg" src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202308192253867.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="srop"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/35734/" title="srop">srop</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-19T14:39:47.000Z" title="发表于 2023-08-19 22:39:47">2023-08-19</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/stack/">stack</a></span></div><div class="content">原理:SROP（Sigreturn Oriented Programming），sigreturn是一个系统调用，在 unix 系统发生 signal 的时候会被间接调用当系统进程发起（deliver）一个 signal 的时候，该进程会被短暂的挂起（suspend），进入内核①，然后内核对该进程保留相应的上下文，跳转到之前注册好的 signal handler 中处理 signal②，当 signal 返回后③，内核为进程恢复之前保留的上下文，恢复进程的执行④内核为进程保留相应的上下文的方法主要是：将所有寄存器压入栈中，以及压入 signal 信息，以及指向 sigreturn 的系统调用地址，此时栈的情况是这样的：我们称 ucontext 以及 siginfo 这一段为 signal frame，需要注意的是这一部分是在用户进程的地址空间，之后会跳转到注册过 signal handler 中处理相应的 signal，因此，当 signal handler 执行完成后就会执行 sigreturn 系统调用来恢复上下文，主要是将之前压入的寄存器的内容给还原回对应的寄存器，然后恢复进程的 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/avatar1.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Tr0upe</div><div class="author-info__description">个人blog</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/mikokuma"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/mikokuma" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:fubao8735@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/594d9f6c/" title="周报"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202403121512101.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="周报"/></a><div class="content"><a class="title" href="/posts/594d9f6c/" title="周报">周报</a><time datetime="2024-03-11T14:20:17.000Z" title="发表于 2024-03-11 22:20:17">2024-03-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/7b49d65d/" title="mips pwn入门指北"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202403112205251.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mips pwn入门指北"/></a><div class="content"><a class="title" href="/posts/7b49d65d/" title="mips pwn入门指北">mips pwn入门指北</a><time datetime="2024-03-10T05:55:02.000Z" title="发表于 2024-03-10 13:55:02">2024-03-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/520eb600/" title="time_formatter题解"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202403072142937.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="time_formatter题解"/></a><div class="content"><a class="title" href="/posts/520eb600/" title="time_formatter题解">time_formatter题解</a><time datetime="2024-03-07T06:11:01.000Z" title="发表于 2024-03-07 14:11:01">2024-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1ca7db7c/" title="ssh-keygen提权"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202402280056184.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ssh-keygen提权"/></a><div class="content"><a class="title" href="/posts/1ca7db7c/" title="ssh-keygen提权">ssh-keygen提权</a><time datetime="2024-02-27T14:50:53.000Z" title="发表于 2024-02-27 22:50:53">2024-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/159ace20/" title="error spawn failed报错"><img src="https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/202401290045539.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="error spawn failed报错"/></a><div class="content"><a class="title" href="/posts/159ace20/" title="error spawn failed报错">error spawn failed报错</a><time datetime="2024-01-28T15:55:28.000Z" title="发表于 2024-01-28 23:55:28">2024-01-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/pwn-college/"><span class="card-category-list-name">pwn.college</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"><span class="card-category-list-name">年终总结</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/"><span class="card-category-list-name">攻防世界</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/ctf/" style="font-size: 1.35em; color: rgb(49, 88, 165)">ctf</a><a href="/tags/stack/" style="font-size: 1.45em; color: rgb(178, 18, 158)">stack</a><a href="/tags/linux/" style="font-size: 1.15em; color: rgb(3, 100, 100)">linux</a><a href="/tags/hexo/" style="font-size: 1.15em; color: rgb(28, 185, 63)">hexo</a><a href="/tags/mips/" style="font-size: 1.15em; color: rgb(150, 188, 193)">mips</a><a href="/tags/heap/" style="font-size: 1.15em; color: rgb(94, 118, 178)">heap</a><a href="/tags/suid/" style="font-size: 1.15em; color: rgb(111, 8, 178)">suid</a><a href="/tags/uaf/" style="font-size: 1.15em; color: rgb(95, 10, 66)">uaf</a><a href="/tags/c/" style="font-size: 1.25em; color: rgb(86, 3, 72)">c</a><a href="/tags/record/" style="font-size: 1.15em; color: rgb(172, 19, 84)">record</a><a href="/tags/assembly/" style="font-size: 1.25em; color: rgb(95, 120, 80)">assembly</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">25</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-03-07T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">15k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://raw.githubusercontent.com/mikokuma/pic_bed/main/img/%E5%9D%82%E4%BA%95%E6%B3%89%E6%B0%B4.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Tr0upe</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hey, nice to meet you!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["Try harder"])
+  } else {
+    document.getElementById("subtitle").innerHTML = 'Try harder'
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></body></html>
